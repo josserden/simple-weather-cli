@@ -1,19 +1,18 @@
 export const getArgs = (args) => {
-  const result = {};
   const [, , ...rest] = args;
 
-  rest.forEach((value, index, array) => {
+  return rest.reduce((acc, value, index, array) => {
     if (value.startsWith('-')) {
       const key = value.replace('-', '');
       const nextValue = array.at(index + 1);
 
       if (nextValue && !nextValue.startsWith('-')) {
-        return (result[key] = nextValue);
+        return { ...acc, [key]: nextValue };
       }
 
-      return (result[key] = true);
+      return { ...acc, [key]: true };
     }
-  });
 
-  return result;
+    return acc;
+  }, {});
 };
