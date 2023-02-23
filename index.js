@@ -4,6 +4,10 @@ import { printHelp, printSuccess, printError } from './services/log-service.js';
 import { saveKeyValue } from './services/storage-service.js';
 
 const saveApiKey = async (apiKey) => {
+  if (!apiKey.length) {
+    return printError('Please provide an API key');
+  }
+
   try {
     await saveKeyValue('apiKey', apiKey);
     printSuccess('API key saved');
