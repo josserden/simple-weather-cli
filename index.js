@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 import { getArgs } from './helpers/args.js';
+import { API_KEY } from './helpers/constants.js';
+import { getWeather } from './services/api-service.js';
 import { printHelp, printSuccess, printError } from './services/log-service.js';
 import { saveKeyValue } from './services/storage-service.js';
 
@@ -9,7 +11,7 @@ const saveApiKey = async (apiKey) => {
   }
 
   try {
-    await saveKeyValue('apiKey', apiKey);
+    await saveKeyValue(API_KEY, apiKey);
     printSuccess('API key saved');
   } catch (error) {
     if (error.message === 'Unexpected token a in JSON at position 1') {
@@ -34,6 +36,8 @@ const init = () => {
   if (args.t) {
     return saveApiKey(args.t);
   }
+
+  getWeather('London');
 };
 
 init();
