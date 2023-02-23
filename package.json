@@ -1,0 +1,25 @@
+{
+  "name": "simple-weather-cli",
+  "version": "1.0.0-alpha",
+  "description": "CLI for getting weather",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josserden/simple-weather-cli.git"
+  },
+  "keywords": [
+    "cli",
+    "simple",
+    "weather"
+  ],
+  "author": "Den Josser",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/josserden/simple-weather-cli/issues"
+  },
+  "homepage": "https://github.com/josserden/simple-weather-cli#readme"
+}
