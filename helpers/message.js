@@ -11,4 +11,17 @@ export const MESSAGE = {
     UNEXPECTED_TOKEN: 'Unexpected token a in JSON at position 1',
     NOT_FOUND: 'City not found. Please try again with a different city.',
   },
+
+  TEMPERATURE: {
+    MIN: 'Min temp',
+    MAX: 'Max temp',
+  },
+
+  PRESSURE: 'Pressure',
+  HUMIDITY: 'Humidity',
+  WIND: {
+    SPEED: 'Wind speed',
+    DEG: 'Wind direction',
+  },
+  CLOUDS: 'Cloudiness',
 };
