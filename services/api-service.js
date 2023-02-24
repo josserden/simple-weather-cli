@@ -19,7 +19,5 @@ export const getWeather = async () => {
     },
   });
 
-  console.log(data);
-
   return data;
 };

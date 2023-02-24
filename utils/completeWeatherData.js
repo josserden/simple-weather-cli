@@ -1,37 +1,3 @@
-/*
-{
-  coord: { lon: 30.7326, lat: 46.4775 },
-  weather: [
-    {
-      id: 804,
-      main: 'Clouds',
-      description: 'overcast clouds',
-      icon: '04d'
-    }
-  ],
-  base: 'stations',
-  main: {
-    temp: 4.24,
-    feels_like: -1.03,
-    temp_min: 4.24,
-    temp_max: 4.24,
-    pressure: 1020,
-    humidity: 73,
-    sea_level: 1020,
-    grnd_level: 1013
-  },
-  visibility: 10000,
-  wind: { speed: 8.68, deg: 181, gust: 11.8 },
-  clouds: { all: 100 },
-  dt: 1677229735,
-  sys: { country: 'UA', sunrise: 1677213998, sunset: 1677252866 },
-  timezone: 7200,
-  id: 698740,
-  name: 'Odesa',
-  cod: 200
-}
-*/
-
 export const completeWeatherData = (weather) => {
   const currentCity = weather.name;
   const currentIcon = weather.weather[0].icon;
