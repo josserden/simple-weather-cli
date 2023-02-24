@@ -3,7 +3,7 @@
   "version": "1.0.0-alpha",
   "description": "CLI for getting weather",
   "homepage": "https://github.com/josserden/simple-weather-cli#readme",
-  "main": "index.js",
+  "main": "weather.js",
   "bin": {
     "simple-weather-cli": "./index.js"
   },
