@@ -33,6 +33,7 @@
 */
 
 export const completeWeatherData = (weather) => {
+  const currentCity = weather.name;
   const currentIcon = weather.weather[0].icon;
   const currentTemp = weather.main.temp;
   const currentFeelsLike = weather.main.feels_like;
@@ -55,5 +56,6 @@ export const completeWeatherData = (weather) => {
     currentWindSpeed,
     currentWindDeg,
     currentClouds,
+    currentCity,
   };
 };

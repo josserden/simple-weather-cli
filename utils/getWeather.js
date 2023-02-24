@@ -35,9 +35,11 @@ export const getForecast = async () => {
     const windSpeed = chalk.cyan(`${currentWindSpeed} m/s`);
     const windDeg = chalk.cyan(`${currentWindDeg}°`);
     const clouds = chalk.cyan(`${currentClouds}%`);
+    const city = chalk.blue(result.currentCity);
 
     console.log(
       dedent(`
+        ${chalk.underline.bold(city)}
         ${icon} ${temp} ${feelsLike}
         ${MESSAGE.TEMPERATURE.MIN}: ${tempMin}
         ${MESSAGE.TEMPERATURE.MAX}: ${tempMax}
